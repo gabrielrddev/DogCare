@@ -2,12 +2,12 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { GlobalStyle } from "./globalStyle";
 
-import App from "./App.jsx";
+import Home from "./containers/Home";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <>
-      <App />
+      <Home />
       <GlobalStyle />
     </>
   </StrictMode>
