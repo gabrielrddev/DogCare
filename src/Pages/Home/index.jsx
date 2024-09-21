@@ -1,19 +1,25 @@
 import React from "react";
 import "./styles.css";
+import imagemdogcare from "../../../public/img/imageDogCareHome.png"
+import { Link } from "react-router-dom"
 
-const App = () => {
+export function Home() {
   return (
+
+    <>
     <div className="dog-care-homepage">
+    
       <header>
         <h1>DogCare</h1>
         <nav>
-          <a href="#">Entrar</a>
+          <a href="#"><Link to='CadastrarPet'>EntrarTESTE</Link></a>
           <a href="#">Crie Conta</a>
         </nav>
       </header>
 
       <main>
-        <section className="hero">
+        <section >
+        <img className="hero"  src={imagemdogcare} alt="" />
           <div className="hero-content">
             <h2>DogCare</h2>
             <p>
@@ -70,7 +76,6 @@ const App = () => {
         </div>
       </footer>
     </div>
+    </>
   );
 };
-
-export default App;

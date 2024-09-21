@@ -1,0 +1,14 @@
+#ErrorPageDiv {
+    margin: 200px;
+    text-align: center;
+}
+.ErrorPageH1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.ErrorPageP {
+    margin-left: 30px;
+}
+.ErrorPageI {
+    margin-right:200px;
+}

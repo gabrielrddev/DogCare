@@ -26,11 +26,13 @@ nav a {
 }
 
 .hero {
-  background-image: url("../../assets/imageDogCareHome.png");
   background-size: cover;
   background-position: center;
   height: 600px;
   position: relative;
+  width: 100%; 
+  object-fit: cover; 
+  max-width: 100%; 
 }
 
 .hero-content {
