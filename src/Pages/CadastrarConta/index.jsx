@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import * as C from "./styles.js";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export function CadastrarConta() {
   const [email, setEmail] = useState("");

@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./styles.css";
 import imagemdogcare from "../../../public/img/imageDogCareHome.png";
 import { Link } from "react-router-dom";
@@ -14,6 +14,7 @@ export function Home() {
               <Link to="EntrarConta">Entrar</Link>
             </a>
             <Link to="CadastrarConta">Crie Conta</Link>
+            <Link to="SimplifiedDogCareAdmin">admin</Link>
           </nav>
         </header>
 
