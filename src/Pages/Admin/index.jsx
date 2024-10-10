@@ -171,7 +171,7 @@ export function SimplifiedDogCareAdmin() {
   return (
     <StyledDogCareAdmin>
       <header>
-        <h1>DogCare</h1>
+        <h1><Link to="SimplifiedDogCareAdmin">DogCare</Link></h1>
         <h2>Administração</h2>
         <p>Pedidos de Agendamento</p>
       </header>

@@ -1,6 +1,5 @@
-
 import * as C from "./styles.js";
-
+import { useNavigate } from 'react-router-dom';
 
 const bookings = [
   { usuario: 'Arnaldo', pet: 'Batman', servico: 'Pacote completo', entrada: '01/06', saida: '03/06' },
@@ -17,11 +16,23 @@ const bookings = [
   { usuario: 'Luiz', pet: 'Amélia', servico: 'Somente banho', entrada: '20/06', saida: '20/06' },
 ];
 
+
+
+
+
 export function DogCareAdminPage() {
+  const navigate = useNavigate();
+
+  const voltar = () => {
+    navigate(-1);
+  };
   return (
+
+
+
     <C.PageContainer>
       <C.Header>
-        <C.Title>DogCare</C.Title>
+        <C.Title onClick={voltar}>DogCare</C.Title>
         <C.Subtitle>Administração</C.Subtitle>
         <p>Pedidos de Agendamento</p>
       </C.Header>

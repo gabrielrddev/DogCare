@@ -18,6 +18,7 @@ export function AuthRoutes() {
       <Route path="SimplifiedDogCareAdmin" element={<SimplifiedDogCareAdmin />} />
       <Route path="SimplifiedDogCareAdmin/DogCareAdminPage" element={<DogCareAdminPage />} />
 
+
       {/* Rotas protegidas
       <Route 
         path="/dashboard" 

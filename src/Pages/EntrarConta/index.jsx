@@ -1,5 +1,6 @@
 import  { useState } from "react";
 import * as C from "./styles.js";
+import { Link } from "react-router-dom";
 
 export function EntrarConta() {
   const [email, setEmail] = useState("");
@@ -16,7 +17,7 @@ export function EntrarConta() {
       <C.FormContainer>
         <C.FormHeader>
           <C.Title>Entre na sua conta</C.Title>
-          <C.CloseButton>&times;</C.CloseButton>
+          <C.CloseButton><Link to="/">X</Link></C.CloseButton>
         </C.FormHeader>
         <C.Form onSubmit={handleSubmit}>
           <C.Input
