@@ -1,6 +1,6 @@
-import  { useState } from "react";
-import * as C from "./styles.js";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import './styles.css'; // Import your CSS file here
 
 export function EntrarConta() {
   const [email, setEmail] = useState("");
@@ -13,31 +13,33 @@ export function EntrarConta() {
   };
 
   return (
-    <C.Container>
-      <C.FormContainer>
-        <C.FormHeader>
-          <C.Title>Entre na sua conta</C.Title>
-          <C.CloseButton><Link to="/">X</Link></C.CloseButton>
-        </C.FormHeader>
-        <C.Form onSubmit={handleSubmit}>
-          <C.Input
+    <div className="container">
+      <div className="form-container">
+        <div className="form-header">
+          <h2 className="title">Entre na sua conta</h2>
+          <button className="close-button"><Link to="/"  className="close-button">X</Link></button>
+        </div>
+        <form className="form" onSubmit={handleSubmit}>
+          <input
             type="email"
+            className="input"
             placeholder="Insira seu email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <C.Input
+          <input
             type="password"
+            className="input"
             placeholder="Insira a sua senha"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <C.SubmitButton type="submit">Entrar</C.SubmitButton>
-        </C.Form>
-        <C.ForgotPassword href="#">Esqueci minha senha.</C.ForgotPassword>
-      </C.FormContainer>
-    </C.Container>
+          <button type="submit" className="submit-button">Entrar</button>
+        </form>
+        <a href="#" className="forgot-password">Esqueci minha senha.</a>
+      </div>
+    </div>
   );
 }

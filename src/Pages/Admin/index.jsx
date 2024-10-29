@@ -3,140 +3,154 @@ import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
 const StyledDogCareAdmin = styled.div`
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dog-care-admin {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+header {
+  background-color: #f4a261;
+  color: white; /* Alterado para preto */
+  padding: 1rem;
+}
+
+.dogcare-logo {
+  color: white; /* Logo na cor preta */
+  text-decoration: none; /* Remove underline do link */
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  padding: 1rem;
+}
+
+.calendar-section {
+  width: 300px;
+  margin-right: 1rem;
+}
+
+.admin-panel {
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+h3, h4 {
+  margin-bottom: 1rem;
+}
+
+.calendar {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+button:hover {
+  color: #1f2937;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.day-name {
+  font-weight: bold;
+}
+
+.admin-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.registroEntrada {
+  color: black;
+  text-decoration: none; /* Remove underline do link */
   
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+}
 
-  header {
-    background-color: #ea580c;
-    color: white;
-    padding: 1rem;
-  }
+.history-section button {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
 
-  h1 {
-    font-size: 1.875rem;
-    font-weight: bold;
-  }
+.history-section button:hover {
+  background-color: #d1d5db;
+}
 
-  h2 {
-    font-size: 1.25rem;
-  }
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
 
+footer {
+  background-color: #f0f0f0;
+  color: black  ; /* Alterado para preto */
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
   main {
-    flex-grow: 1;
-    display: flex;
-    padding: 1rem;
+    flex-direction: column;
   }
 
   .calendar-section {
-    width: 300px;
-    margin-right: 1rem;
-  }
-
-  .admin-panel {
-    flex-grow: 1;
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-  }
-
-  h3, h4 {
+    width: 100%;
+    margin-right: 0;
     margin-bottom: 1rem;
-  }
-
-  .calendar {
-    background-color: #f9fafb;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #4b5563;
-  }
-
-  button:hover {
-    color: #1f2937;
-  }
-
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 0.25rem;
-  }
-
-  .calendar-day {
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 0.875rem;
-  }
-
-  .day-name {
-    font-weight: bold;
   }
 
   .admin-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
   }
+}
 
-  .history-section button {
-    background-color: #e5e7eb;
-    color: #1f2937;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-  }
-
-  .history-section button:hover {
-    background-color: #d1d5db;
-  }
-
-  ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-  }
-
-  footer {
-    background-color: #ea580c;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  @media (max-width: 768px) {
-    main {
-      flex-direction: column;
-    }
-
-    .calendar-section {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 1rem;
-    }
-
-    .admin-content {
-      grid-template-columns: 1fr;
-    }
-  }
 `;
 
 export function SimplifiedDogCareAdmin() {
@@ -171,9 +185,9 @@ export function SimplifiedDogCareAdmin() {
   return (
     <StyledDogCareAdmin>
       <header>
-        <h1><Link to="/">DogCare</Link></h1>
+        <h1><Link to="/" className='dogcare-logo'>DogCare</Link></h1>
         <h2>Administração</h2>
-        <p>Pedidos de Agendamento</p>
+        <p><Link to="DogCareAdminPage"  className='dogcare-logo'>Pedidos de Agendamento</Link></p>
       </header>
 
       <main>
@@ -200,7 +214,7 @@ export function SimplifiedDogCareAdmin() {
           <div className="admin-content">
             <div className="history-section">
               <h4>Histórico</h4>
-              <button><Link to="DogCareAdminPage">Registro de entradas</Link></button>
+              <button><Link to="DogCareAdminPage" className="registroEntrada">Registro de entradas</Link></button>
             </div>
             <div className="notes-section">
               <h4>Notas</h4>

@@ -5,7 +5,7 @@ export const PageContainer = styled.div`
   font-family: Arial, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #f0f0f0;
+  background-color: #f4a261;
 `;
 
 export const Header = styled.header`
@@ -18,9 +18,10 @@ export const Header = styled.header`
 `;
 
 export const Title = styled.h1`
-  color: #f4811e;
+  color: #white;
   font-size: 36px;
   margin: 0;
+  cursor: pointer;
 `;
 
 export const Subtitle = styled.h2`

@@ -14,7 +14,7 @@ export function Home() {
               <Link to="EntrarConta">Entrar</Link>
             </a>
             <Link to="CadastrarConta">Crie Conta</Link>
-            <Link to="SimplifiedDogCareAdmin">admin</Link>
+            <Link to="SimplifiedDogCareAdmin">A dmin</Link>
           </nav>
         </header>
 

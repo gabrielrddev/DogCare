@@ -19,7 +19,7 @@ export function CadastrarConta() {
       <C.ContainerItem>
         <C.ContainerTitle>
           <C.Title>Crie sua conta</C.Title>
-          <C.CloseButton className="close-button"><Link to="/">X</Link></C.CloseButton>
+          <C.CloseButton className="close-button"><Link to="/"  className="close-button">X</Link></C.CloseButton>
         </C.ContainerTitle>
         <C.Formulario onSubmit={handleSubmit}>
           <C.FormInput
