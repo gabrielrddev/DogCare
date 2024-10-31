@@ -1,82 +1,58 @@
-
-import "./styles.css";
 import imagemdogcare from "../../../public/img/imageDogCareHome.png";
 import { Link } from "react-router-dom";
+import  {Footer}  from '../../components/Footer/index.jsx';
 
 export function Home() {
   return (
-    <>
-      <div className="dog-care-homepage">
-        <header>
-          <h1>DogCare</h1>
-          <nav>
-            <a href="#">
-              <Link to="EntrarConta">Entrar</Link>
-            </a>
-            <Link to="CadastrarConta">Crie Conta</Link>
-            <Link to="SimplifiedDogCareAdmin">A dmin</Link>
-          </nav>
-        </header>
+    <div className="font-sans">
+      <header className="bg-orange-400 text-white p-4 flex justify-between items-center">
+        <h1 className="text-xl">DogCare</h1>
+        <nav>
+          <Link to="Login" className="text-white mx-2 font-bold">Entrar</Link>
+          <Link to="Register" className="text-white mx-2 font-bold">Crie Conta</Link>
+          <Link to="AdminCalendar" className="text-white mx-2 font-bold">Admin</Link>
+        </nav>
+      </header>
 
-        <main>
-          <section>
-            <img className="hero" src={imagemdogcare} alt="" />
-            <div className="hero-content">
-              <h2>DogCare</h2>
-              <p>
-                Seu cãozinho em ótimas mãos enquanto você viaja ou precisa se
-                ausentar
-              </p>
-              <button>Saiba mais</button>
-            </div>
-          </section>
-
-          <section className="booking">
-            <div className="booking-form">
-              <h3>Endereço</h3>
-              <div className="form-inputs">
-                <input type="text" placeholder="Data Entrada" />
-                <input type="text" placeholder="Data Saída" />
-                <button>Agendar</button>
-              </div>
-            </div>
-          </section>
-
-          <section className="info-section">
-            <div className="info-card">
-              <h3>Onde Estamos</h3>
-              <p>R. Exemplo, 123 - Bairro Exemplo, São Paulo - SP, 12345-678</p>
-              <p>+55 (11) 91234-5678</p>
-              <p>contato@dogcare.com.br</p>
-            </div>
-            <div className="info-card">
-              <h3>Nossos Serviços</h3>
-              <ul>
-                <li>Daycare - diversão e cuidados especiais durante o dia</li>
-                <li>Banho e Tosa - deixe seu amigo limpo e cheiroso</li>
-              </ul>
-            </div>
-          </section>
-        </main>
-
-        <footer>
-          <p>
-            DogCare - Rua Luis Silveirinha, 855 - São José / SC | Telefone: (48)
-            99125-2831
-          </p>
-          <div className="social-icons">
-            <a href="#" aria-label="Instagram">
-              Instagram
-            </a>
-            <a href="#" aria-label="Phone">
-              Phone
-            </a>
-            <a href="#" aria-label="Email">
-              Email
-            </a>
+      <main>
+        <section className="relative">
+          <img className="w-full h-96 object-cover" src={imagemdogcare} alt="" />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white bg-black bg-opacity-50 p-8">
+            <h2 className="text-3xl mb-4">DogCare</h2>
+            <p>Seu cãozinho em ótimas mãos enquanto você viaja ou precisa se ausentar</p>
+            <button className="bg-orange-400 text-white px-4 py-2 mt-4">Saiba mais</button>
           </div>
-        </footer>
-      </div>
-    </>
+        </section>
+
+        <section className="max-w-xl mx-auto my-8">
+          <div className="bg-orange-100 p-4 rounded-lg">
+            <h3 className="text-lg">Endereço</h3>
+            <div className="flex gap-4 mt-2">
+              <input type="text" placeholder="Data Entrada" className="flex-1 p-2 border border-gray-300 rounded" />
+              <input type="text" placeholder="Data Saída" className="flex-1 p-2 border border-gray-300 rounded" />
+              <button className="bg-orange-400 text-white px-4 py-2">Agendar</button>
+            </div>
+          </div>
+        </section>
+
+        <section className="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h3 className="text-lg">Onde Estamos</h3>
+            <p>R. Exemplo, 123 - Bairro Exemplo, São Paulo - SP, 12345-678</p>
+            <p>+55 (11) 91234-5678</p>
+            <p>contato@dogcare.com.br</p>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <h3 className="text-lg">Nossos Serviços</h3>
+            <ul className="list-disc pl-5">
+              <li>Daycare - diversão e cuidados especiais durante o dia</li>
+              <li>Banho e Tosa - deixe seu amigo limpo e cheiroso</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
   );
 }

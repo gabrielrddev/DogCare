@@ -1,24 +1,19 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "../Pages/Home/index.jsx";
-
-import { CadastrarConta } from "../Pages/CadastrarConta/index.jsx";
-import { EntrarConta } from "../Pages/EntrarConta/index.jsx";
-
-import { SimplifiedDogCareAdmin } from  "../Pages/Admin/index.jsx";
-import { DogCareAdminPage } from  "../Pages/DogCareAdminPage/index.jsx";
-
+import { Home } from "../pages/Home/index.jsx";
+import { Login } from "../pages/Login/index.jsx";
+import { Register } from "../pages/Register/index.jsx";
+import { AdminCalendar } from "../pages/AdminCalendar/index.jsx";
+import { AdminHistory } from "../pages/AdminHistory/index.jsx";
 
 export function AuthRoutes() {
   return (
     <Routes>
       {/* Rotas públicas */}
       <Route path="/" element={<Home />} />
-      <Route path="EntrarConta" element={<EntrarConta />} />
-      <Route path="CadastrarConta" element={<CadastrarConta />} />
-      <Route path="SimplifiedDogCareAdmin" element={<SimplifiedDogCareAdmin />} />
-      <Route path="SimplifiedDogCareAdmin/DogCareAdminPage" element={<DogCareAdminPage />} />
-
-
+      <Route path="Login" element={<Login />} />
+      <Route path="Register" element={<Register />} />
+      <Route path="AdminCalendar" element={<AdminCalendar />} />
+      <Route path="AdminCalendar/AdminHistory" element={<AdminHistory />} />
       {/* Rotas protegidas
       <Route 
         path="/dashboard" 
