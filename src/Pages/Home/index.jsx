@@ -8,7 +8,7 @@ export function Home() {
       <header className="bg-orange-400 text-white p-4 flex justify-between items-center">
         <h1 className="text-xl">DogCare</h1>
         <nav>
-          <Link to="Login" className="text-white mx-2 font-bold">Entrar</Link>
+          <Link to="Login" className="text-white mx-2 font-bold">Entrara</Link>
           <Link to="Register" className="text-white mx-2 font-bold">Crie Conta</Link>
           <Link to="AdminCalendar" className="text-white mx-2 font-bold">Admin</Link>
         </nav>
