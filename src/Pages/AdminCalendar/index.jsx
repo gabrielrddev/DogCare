@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
+import { CalendarData } from "../../components/Calendar";
 
 export function AdminCalendar() {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -29,6 +30,10 @@ export function AdminCalendar() {
   };
 
   return (
+
+
+
+    
     <div className="flex flex-col min-h-screen bg-orange-400">
       <header className="bg-orange-600 text-white p-4">
         <h1 className="text-2xl font-bold">
@@ -43,19 +48,8 @@ export function AdminCalendar() {
       <main className="flex-grow flex p-4">
         <div className="w-80 mr-4">
           <h4 className="font-semibold mb-2">Agendamentos Confirmados</h4>
-          <div className="bg-gray-100 rounded-md p-4 mb-4">
-            <div className="flex justify-between items-center mb-2">
-              <button onClick={prevMonth} className="text-gray-700">&lt;</button>
-              <h5 className="font-medium">{currentDate.toLocaleString('default', { month: 'long', year: 'numeric' })}</h5>
-              <button onClick={nextMonth} className="text-gray-700">&gt;</button>
-            </div>
-            <div className="grid grid-cols-7 gap-1">
-              {['Do', 'Se', 'Te', 'Qu', 'Qu', 'Se', 'Sa'].map(day => (
-                <div key={day} className="text-center font-bold">{day}</div>
-              ))}
-              {renderCalendar()}
-            </div>
-          </div>
+          <CalendarData />
+          
         </div>
 
         <div className="flex-grow bg-white rounded-md shadow-md p-6">

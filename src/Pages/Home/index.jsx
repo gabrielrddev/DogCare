@@ -1,4 +1,4 @@
-import imagemdogcare from "../../../public/img/imageDogCareHome.png";
+import imagemdogcare from "/img/imageDogCareHome.png";
 import { Link } from "react-router-dom";
 import  {Footer}  from '../../components/Footer/index.jsx';
 

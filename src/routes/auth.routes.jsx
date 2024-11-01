@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "../pages/Home/index.jsx";
-import { Login } from "../pages/Login/index.jsx";
-import { Register } from "../pages/Register/index.jsx";
-import { AdminCalendar } from "../pages/AdminCalendar/index.jsx";
-import { AdminHistory } from "../pages/AdminHistory/index.jsx";
+import { Home } from "../pages/Home";
+import { Login } from "../pages/Login";
+import { Register } from "../pages/Register";
+import { AdminCalendar } from "../pages/AdminCalendar";
+import { AdminHistory } from "../pages/AdminHistory";
 
 export function AuthRoutes() {
   return (
