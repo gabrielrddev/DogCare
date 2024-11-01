@@ -15,12 +15,24 @@ const bookings = [
   { usuario: 'Luiz', pet: 'Amélia', servico: 'Somente banho', entrada: '20/06', saida: '20/06' },
 ];
 
+
+
 export function AdminHistory() {
+
+
   const navigate = useNavigate();
 
   const voltar = () => {
     navigate(-1);
   };
+
+  function selectYes() {
+    alert('Você selecionou sim')
+  }
+  
+  function selectNo() {
+    alert('Você selecionou não')
+  }
 
   return (
     <div className="max-w-6xl mx-auto bg-orange-400">
@@ -53,8 +65,8 @@ export function AdminHistory() {
                 <td className="border p-3">{booking.entrada}</td>
                 <td className="border p-3">{booking.saida}</td>
                 <td className="border p-3">
-                  <span role="img" aria-label="aprovar" className="cursor-pointer">✅</span>
-                  <span role="img" aria-label="rejeitar" className="cursor-pointer">❌</span>
+                  <span onClick={selectYes} role="img" aria-label="aprovar" className="cursor-pointer">✅</span>
+                  <span onClick={selectNo} role="img" aria-label="rejeitar" className="cursor-pointer">❌</span>
                 </td>
               </tr>
             ))}
