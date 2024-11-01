@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import  {Footer}  from '../../components/Footer/index.jsx';
 
 export function Home() {
+
+  function markTo() {
+    alert('Porfavor crie uma conta para poder realizar seu agendamente.')
+  }
   return (
     <div className="font-sans">
       <header className="bg-orange-400 text-white p-4 flex justify-between items-center">
@@ -30,7 +34,7 @@ export function Home() {
             <div className="flex gap-4 mt-2">
               <input type="text" placeholder="Data Entrada" className="flex-1 p-2 border border-gray-300 rounded" />
               <input type="text" placeholder="Data Saída" className="flex-1 p-2 border border-gray-300 rounded" />
-              <button className="bg-orange-400 text-white px-4 py-2">Agendar</button>
+              <button onClick={()=> markTo()} className="bg-orange-400 text-white px-4 py-2">Agendar</button>
             </div>
           </div>
         </section>
