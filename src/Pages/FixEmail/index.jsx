@@ -28,7 +28,7 @@ export function FixEmail() {
             required
           />
           <button type="submit" className="w-full bg-green-500 text-white py-2 rounded transition duration-300 hover:bg-green-600">
-            <Link to='Login/FixEmail/FixEmail2' >Enviar</Link>
+            <Link to='FixEmail2' >Enviar</Link>
           </button>
         </form>
       </div>
