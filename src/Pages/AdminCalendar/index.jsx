@@ -1,48 +1,9 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import { CalendarData } from "../../components/Calendar";
 import EditableNotes from "../../components/EditableNotes";
 
 export function AdminCalendar() {
-  const [currentDate, setCurrentDate] = useState(new Date());
-
-  const daysInMonth = new Date(
-    currentDate.getFullYear(),
-    currentDate.getMonth() + 1,
-    0
-  ).getDate();
-  const firstDayOfMonth = new Date(
-    currentDate.getFullYear(),
-    currentDate.getMonth(),
-    1
-  ).getDay();
-
-  const renderCalendar = () => {
-    const days = [];
-    for (let i = 0; i < firstDayOfMonth; i++) {
-      days.push(<div key={`empty-${i}`} className="calendar-day"></div>);
-    }
-    for (let i = 1; i <= daysInMonth; i++) {
-      days.push(
-        <div key={i} className="calendar-day text-center p-2 text-sm">
-          {i}
-        </div>
-      );
-    }
-    return days;
-  };
-
-  const nextMonth = () => {
-    setCurrentDate(
-      new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1)
-    );
-  };
-
-  const prevMonth = () => {
-    setCurrentDate(
-      new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1)
-    );
-  };
 
   return (
     <div className="flex flex-col min-h-screen bg-orange-400">

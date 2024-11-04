@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import  EditableNotes  from '../../components/EditableNotes';
+import {Footer} from '../../components/Footer'
 
 let idCounter = 0; // contador global para IDs
 
@@ -41,7 +43,7 @@ export function AdminHistory() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto bg-orange-400">
+    <div className=" mx-auto ">
       <header className="bg-orange-600 text-white p-5 h-52 flex flex-col justify-center">
         <h1 className="text-3xl font-bold cursor-pointer" onClick={voltar}>DogCare</h1>
         <h2 className="text-xl">Administração</h2>
@@ -84,22 +86,15 @@ export function AdminHistory() {
             <h3 className="text-xl mb-2">Histórico</h3>
             <button className="bg-orange-500 text-white px-4 py-2 rounded-md">Registro de entradas</button>
           </div>
-          <div className="w-1/2">
-            <h3 className="text-xl mb-2">Notas</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Suspendisse rhoncus et augue faucibus.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div>
+              <EditableNotes />
           </div>
         </div>
+        <Footer /> 
       </main>
 
-      <footer className="bg-orange-600 text-white p-4 flex justify-between items-center">
-        <span>DogCare - Rua Luke Skywalker, 123 - São José / SC | Telefone: (48) 91012-2913</span>
-        <div className="flex space-x-3">
-          <span role="img" aria-label="Instagram" className="cursor-pointer">📷</span>
-          <span role="img" aria-label="WhatsApp" className="cursor-pointer">📱</span>
-          <span role="img" aria-label="Email" className="cursor-pointer">📧</span>
-        </div>
+      <footer>
+    
       </footer>
     </div>
   );
