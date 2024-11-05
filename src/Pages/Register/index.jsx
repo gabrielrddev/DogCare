@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header"
 
+
 export function Register() {
   const [email, setEmail] = useState("");
   const [emailConfirmation, setEmailConfirmation] = useState("");
@@ -17,7 +18,7 @@ export function Register() {
   return (
     <div>
       <Header />
-    <div className="w-screen h-screen flex items-center justify-center bg-gray-100">
+    <div className="w-screen h-screen flex items-center justify-center bg-gray-600">
       <div className="bg-gray-200 p-6 rounded-md shadow-lg min-w-[27rem] min-h-[19rem]">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold">Crie sua conta</h2>
@@ -62,7 +63,7 @@ export function Register() {
             type="submit"
             className="w-full bg-green-600 text-white p-2 rounded-md transition duration-300 hover:bg-green-500"
           >
-            Cadastrar
+            <Link to="/Register/Login"> Cadastrar </Link>
           </button>
         </form>
       </div>

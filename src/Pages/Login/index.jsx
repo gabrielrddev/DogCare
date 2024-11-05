@@ -16,7 +16,7 @@ export function Login() {
   return (
       <div>
         <Header />
-    <div className="w-screen h-screen flex items-center justify-center bg-gray-100">
+    <div className="w-screen h-screen flex items-center justify-center bg-gray-600">
    
       <div className="bg-gray-200 p-6 rounded-lg shadow-lg min-w-[27rem] min-h-[19rem]">
         <div className="flex justify-between items-center mb-4">

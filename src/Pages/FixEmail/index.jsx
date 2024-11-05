@@ -11,11 +11,11 @@ export function FixEmail() {
   };
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-orange-600">
+    <div className="w-screen h-screen flex items-center justify-center bg-gray-600">
       <div className="bg-gray-200 p-6 rounded-lg shadow-lg min-w-[27rem] min-h-[19rem]">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold">Recuperar Conta <br /> 
-          Iremos enviar um codigo para seu E-mail</h2> <br />
+          Iremos enviar um link de alteração de <br />senha para seu E-mail</h2> <br />
           <Link to="/" className="text-2xl text-black">X</Link>
         </div>
         <form className="flex flex-col" onSubmit={handleSubmit}>
@@ -28,7 +28,7 @@ export function FixEmail() {
             required
           />
           <button type="submit" className="w-full bg-green-500 text-white py-2 rounded transition duration-300 hover:bg-green-600">
-            <Link to='FixEmail2' >Enviar</Link>
+            <Link to='/' >Enviar</Link>
           </button>
         </form>
       </div>
