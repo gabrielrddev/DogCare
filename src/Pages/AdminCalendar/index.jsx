@@ -5,7 +5,8 @@ import EditableNotes from "../../components/EditableNotes";
 import adminback from "/img/adminback.png";
 import { Footer } from "../../components/Footer";
 import logocachorro from "/img/logocachorro.jpg"
-import adminjunin from "/img/adminjunin.jpg"
+
+import { HeaderAdmin } from "../../components/HeaderAdmin"
 
 export function AdminCalendar() {
   const [showPetDetails, setShowPetDetails] = useState(false);
@@ -25,13 +26,7 @@ export function AdminCalendar() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
-      {/* Header fixo no topo */}
-      <header className="top-0 bg-gray-800 text-white p-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">
-          <Link to="/">Home</Link>
-        </h1>
-        <img src={adminjunin} alt="user.png" className="w-10 h-10 rounded-full" />
-      </header>
+      <HeaderAdmin />
 
       {/* Seção da imagem com texto sobreposto e botão */}
       <div className="flex flex-col items-center justify-center ">
@@ -43,14 +38,14 @@ export function AdminCalendar() {
           <div className="relative z-10 text-center">
             <h1 className="text-5xl font-bold text-orange-500"><Link to='/'> DogCare</Link></h1>
             <h2 className="text-2xl mt-2 text-white">Administração</h2>
-            <p  className="text-orange-400 font-semibold text-lg no-underline">
-                Painel do Administrador </p>
+            <p  className="text-orange-400 font-semibold text-lg no-underline hover:text-orange-600">
+                <Link to="AdminHistory"> Pedidos de Agendamento </Link></p>
           </div>
         </section>
 
         {/* Botão centralizado abaixo da imagem */}
-        <button className="bg-orange-500 text-white px-6 py-3 rounded-md shadow-md mb-8 hover:bg-orange-600">
-        <Link to="AdminHistory"> Pedidos de Agendamento </Link> </button>
+        <button className="bg-orange-500 text-white px-6 py-3 rounded-md shadow-md mb-8 ">
+        Painel do Administrador </button>
       </div>
 
       {/* Conteúdo principal com agendamentos, histórico e notas */}

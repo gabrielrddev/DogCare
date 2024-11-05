@@ -2,6 +2,9 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import  EditableNotes  from '../../components/EditableNotes';
 import {Footer} from '../../components/Footer'
+import { HeaderAdmin } from "../../components/HeaderAdmin"
+import adminback from "/img/adminback.png";
+import { Link } from "react-router-dom";
 
 let idCounter = 0; // contador global para IDs
 
@@ -43,58 +46,73 @@ export function AdminHistory() {
   }
 
   return (
-    <div className=" mx-auto ">
-      <header className="bg-orange-600 text-white p-5 h-52 flex flex-col justify-center">
-        <h1 className="text-3xl font-bold cursor-pointer" onClick={voltar}>DogCare</h1>
-        <h2 className="text-xl">Administração</h2>
-        <p>Pedidos de Agendamento</p>
-      </header>
-
-      <main className="bg-white p-5 shadow-lg">
-        <div className="bg-orange-500 text-white p-3 font-bold mb-5">Painel do Administrador</div>
-        <h3 className="text-2xl mb-4">Pedidos de Agendamento</h3>
-        <table className="min-w-full border-collapse mb-5">
-          <thead>
-            <tr>
-              <th className="bg-orange-500 text-white text-left p-3">Usuário</th>
-              <th className="bg-orange-500 text-white text-left p-3">Pet</th>
-              <th className="bg-orange-500 text-white text-left p-3">Serviço desejado</th>
-              <th className="bg-orange-500 text-white text-left p-3">Dt. de entrada</th>
-              <th className="bg-orange-500 text-white text-left p-3">Dt. de saída</th>
-              <th className="bg-orange-500 text-white text-left p-3">Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bookings.map((booking) => (
-              <tr key={booking.id} className={approvedBookings.has(booking.id) ? 'bg-green-200' : ''}>
-                <td className="border p-3">{booking.usuario}</td>
-                <td className="border p-3">{booking.pet}</td>
-                <td className="border p-3">{booking.servico}</td>
-                <td className="border p-3">{booking.entrada}</td>
-                <td className="border p-3">{booking.saida}</td>
-                <td className="border p-3">
-                  <span onClick={() => selectYes(booking.usuario, booking.id)} role="img" aria-label="aprovar" className="cursor-pointer">✅</span>
-                  <span onClick={() => selectNo(booking.usuario)} role="img" aria-label="rejeitar" className="cursor-pointer">❌</span>
-                </td>
+    <div className="mx-auto mt-0 bg-gray-100"> {/* Remover margem superior */}
+      <HeaderAdmin />
+      <section
+        className="relative bg-cover bg-center h-80 w-full flex flex-col justify-center items-center mb-4"
+        style={{ backgroundImage: `url(${adminback})` }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50 rounded-md"></div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-5xl font-bold text-orange-500 cursor-pointer" onClick={voltar}>DogCare</h1>
+          <h2 className="text-2xl mt-2 text-white">Administração</h2>
+          <p className="text-orange-400 font-semibold text-lg no-underline hover:text-orange-600 cursor-pointer" onClick={voltar}>
+            Painel do Administrador
+          </p>
+        </div>
+      </section>
+      <div className='flex flex-col items-center justify-center bg-gray-100'>
+      <div className="text-1xl  bg-orange-500 text-white px-12 py-3 rounded-md shadow-md mb-8 ">Pedidos de Agendamento</div>
+      </div>
+      <main className="bg-gray-100 p-5  flex justify-center mt-0"> {/* Remover margem superior no main */}
+        {/* Centraliza o conteúdo e define uma largura máxima */}
+        <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-5">
+        
+          <table className="min-w-full border-collapse mb-5">
+            <thead>
+              <tr>
+                <th className="bg-orange-500 text-white text-left p-3">Usuário</th>
+                <th className="bg-orange-500 text-white text-left p-3">Pet</th>
+                <th className="bg-orange-500 text-white text-left p-3">Serviço desejado</th>
+                <th className="bg-orange-500 text-white text-left p-3">Dt. de entrada</th>
+                <th className="bg-orange-500 text-white text-left p-3">Dt. de saída</th>
+                <th className="bg-orange-500 text-white text-left p-3">Ações</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {bookings.map((booking) => (
+                <tr key={booking.id} className={approvedBookings.has(booking.id) ? 'bg-green-200' : ''}>
+                  <td className="border p-3">{booking.usuario}</td>
+                  <td className="border p-3">{booking.pet}</td>
+                  <td className="border p-3">{booking.servico}</td>
+                  <td className="border p-3">{booking.entrada}</td>
+                  <td className="border p-3">{booking.saida}</td>
+                  <td className="border p-3">
+                    <span onClick={() => selectYes(booking.usuario, booking.id)} role="img" aria-label="aprovar" className="cursor-pointer">✅</span>
+                    <span onClick={() => selectNo(booking.usuario)} role="img" aria-label="rejeitar" className="cursor-pointer">❌</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
 
-        <div className="flex justify-between">
-          <div className="w-1/2">
-            <h3 className="text-xl mb-2">Histórico</h3>
-            <button className="bg-orange-500 text-white px-4 py-2 rounded-md">Registro de entradas</button>
-          </div>
-          <div>
+          <div className="flex justify-between">
+            <div className="w-1/2">
+              <h3 className="text-xl mb-2">Histórico</h3>
+              <button className="bg-orange-500 text-white px-4 py-2 rounded-md">Registro de entradas</button>
+            </div>
+            <div>
               <EditableNotes />
+            </div>
           </div>
         </div>
-        <Footer /> 
       </main>
 
-      <footer>
-    
+      {/* Footer com largura total */}
+      <footer >
+        <div>
+          <Footer />
+        </div>
       </footer>
     </div>
   );

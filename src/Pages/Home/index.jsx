@@ -1,6 +1,7 @@
 import imagemdogcare from "/img/imageDogCareHome.png";
 import { Link } from "react-router-dom";
 import  {Footer}  from '../../components/Footer/index.jsx';
+import { Header } from "../../components/Header"
 
 export function Home() {
 
@@ -9,22 +10,14 @@ export function Home() {
   }
   return (
     <div className="font-sans">
-      <header className="bg-orange-400 text-white p-4 flex justify-between items-center">
-        <h1 className="text-xl">DogCare</h1>
-        <nav>
-          <Link to="Login" className="text-white mx-2 font-bold">Entrar</Link>
-          <Link to="Register" className="text-white mx-2 font-bold">Crie Conta</Link>
-          <Link to="AdminCalendar" className="text-white mx-2 font-bold">Admin</Link>
-        </nav>
-      </header>
-
+      <Header />
       <main>
         <section className="relative">
           <img className="w-full h-96 object-cover" src={imagemdogcare} alt="" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white bg-black bg-opacity-50 p-8">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center rounded-lg text-white bg-black bg-opacity-50 p-8">
             <h2 className="text-3xl mb-4">DogCare</h2>
             <p>Seu cãozinho em ótimas mãos enquanto você viaja ou precisa se ausentar</p>
-            <button className="bg-orange-400 text-white px-4 py-2 mt-4">Saiba mais</button>
+            <button className="bg-orange-300 text-white px-4 py-2 mt-4 rounded-lg">Saiba mais</button>
           </div>
         </section>
 
@@ -34,7 +27,7 @@ export function Home() {
             <div className="flex gap-4 mt-2">
               <input type="text" placeholder="Data Entrada" className="flex-1 p-2 border border-gray-300 rounded" />
               <input type="text" placeholder="Data Saída" className="flex-1 p-2 border border-gray-300 rounded" />
-              <button onClick={()=> markTo()} className="bg-orange-400 text-white px-4 py-2">Agendar</button>
+              <button onClick={()=> markTo()} className="bg-orange-300 text-white px-4 py-2 rounded-lg">Agendar</button>
             </div>
           </div>
         </section>
