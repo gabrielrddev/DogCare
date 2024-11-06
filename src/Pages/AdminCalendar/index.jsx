@@ -4,9 +4,9 @@ import { CalendarData } from "../../components/Calendar";
 import EditableNotes from "../../components/EditableNotes";
 import adminback from "/img/adminback.png";
 import { Footer } from "../../components/Footer";
-import logocachorro from "/img/logocachorro.jpg"
+import logocachorro from "/img/logocachorro.jpg";
 
-import { HeaderAdmin } from "../../components/HeaderAdmin"
+import { HeaderAdmin } from "../../components/HeaderAdmin";
 
 export function AdminCalendar() {
   const [showPetDetails, setShowPetDetails] = useState(false);
@@ -36,16 +36,20 @@ export function AdminCalendar() {
         >
           <div className="absolute inset-0 bg-black opacity-50 rounded-md"></div>
           <div className="relative z-10 text-center">
-            <h1 className="text-5xl font-bold text-orange-500"><Link to='/'> DogCare</Link></h1>
+            <h1 className="text-5xl font-bold text-orange-500">
+              <Link to="/"> DogCare</Link>
+            </h1>
             <h2 className="text-2xl mt-2 text-white">Administração</h2>
-            <p  className="text-orange-400 font-semibold text-lg no-underline hover:text-orange-600">
-                <Link to="AdminHistory"> Pedidos de Agendamento </Link></p>
+            <p className="text-orange-400 font-semibold text-lg no-underline hover:text-orange-600">
+              <Link to="AdminHistory"> Pedidos de Agendamento </Link>
+            </p>
           </div>
         </section>
 
         {/* Botão centralizado abaixo da imagem */}
         <button className="bg-orange-500 text-white px-6 py-3 rounded-md shadow-md mb-8 ">
-        Painel do Administrador </button>
+          Painel do Administrador{" "}
+        </button>
       </div>
 
       {/* Conteúdo principal com agendamentos, histórico e notas */}
@@ -64,7 +68,7 @@ export function AdminCalendar() {
               <div>
                 <h4 className="font-semibold mb-2">Histórico</h4>
                 <button className="bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400">
-                  <Link to="AdminHistory">Registro de entradas</Link>
+                  <Link to="AdminHistoryClient">Registro de entradas</Link>
                 </button>
 
                 {/* Espaço para a foto do pet */}
@@ -78,11 +82,21 @@ export function AdminCalendar() {
                   />
                   {showPetDetails && (
                     <div className="mt-4 bg-gray-100 p-4 rounded-md shadow-md">
-                      <h5 className="font-bold text-lg mb-2">Detalhes do Pet</h5>
-                      <p><strong>Nome:</strong> {petDetails.name}</p>
-                      <p><strong>Alergia:</strong> {petDetails.alergia}</p>
-                      <p><strong>Idade:</strong> {petDetails.age}</p>
-                      <p><strong>Dono:</strong> {petDetails.owner}</p>
+                      <h5 className="font-bold text-lg mb-2">
+                        Detalhes do Pet
+                      </h5>
+                      <p>
+                        <strong>Nome:</strong> {petDetails.name}
+                      </p>
+                      <p>
+                        <strong>Alergia:</strong> {petDetails.alergia}
+                      </p>
+                      <p>
+                        <strong>Idade:</strong> {petDetails.age}
+                      </p>
+                      <p>
+                        <strong>Dono:</strong> {petDetails.owner}
+                      </p>
                     </div>
                   )}
                 </div>
