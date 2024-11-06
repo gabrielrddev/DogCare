@@ -26,6 +26,7 @@ export function AuthRoutes() {
         element={<AdminHistoryClient />}
       />
       <Route path="/Login/Register" element={<Register />} />
+
       <Route path="/Register/Login" element={<Login />} />
       <Route path="/Register/Login/FixEmail" element={<FixEmail />} />
       {/* Rotas protegidas
