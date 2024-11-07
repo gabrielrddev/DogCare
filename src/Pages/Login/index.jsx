@@ -42,7 +42,7 @@ export function Login() {
               type="submit"
               className="w-full bg-green-500 text-white py-2 rounded transition duration-300 hover:bg-green-600"
             >
-              Entrar
+              <Link to='/Login/UserHome'> Entrar </Link>
             </button>
           </form>
           <Link
