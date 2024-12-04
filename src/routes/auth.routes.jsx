@@ -8,6 +8,7 @@ import { FixEmail } from "../Pages/FixEmail";
 import { AdminHistoryClient } from "../Pages/AdminHistoryClient";
 import { UserHome } from "../Pages/UserHome";
 import { About } from "../Pages/About";
+import { UserPerfil } from "../Pages/UserPerfil";
 export function AuthRoutes() {
   return (
     <Routes>
@@ -18,13 +19,20 @@ export function AuthRoutes() {
       <Route path="AdminCalendar" element={<AdminCalendar />} />
       <Route path="AdminCalendar/AdminHistory" element={<AdminHistory />} />
       <Route path="/Login/FixEmail" element={<FixEmail />} />
-      <Route path="/AdminCalendar/AdminHistoryClient"element={<AdminHistoryClient />}/>
-      <Route path="AdminCalendar/AdminHistory/AdminHistoryClient"element={<AdminHistoryClient />}/>
+      <Route
+        path="/AdminCalendar/AdminHistoryClient"
+        element={<AdminHistoryClient />}
+      />
+      <Route
+        path="AdminCalendar/AdminHistory/AdminHistoryClient"
+        element={<AdminHistoryClient />}
+      />
       <Route path="/Login/Register" element={<Register />} />
       <Route path="/Login/UserHome" element={<UserHome />} />
       <Route path="/Register/Login" element={<Login />} />
       <Route path="/Register/Login/FixEmail" element={<FixEmail />} />
       <Route path="/About" element={<About />} />
+      <Route path="/Perfil" element={<UserPerfil />} />
       {/* Rotas protegidas
       <Route 
         path="/dashboard" 
