@@ -1,13 +1,26 @@
 import PetList from "../../components/PetList";
-import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import imagemdogcare from "/img/imageDogCareHome.png";
 import imagemPerfil from "../../../dist/img/imagemDePerfil.png";
+import { Link } from "react-router-dom";
 
 export const UserPerfil = () => {
   return (
     <div className="font-sans min-h-screen flex flex-col">
-      <Header />
+      <header className="bg-orange-300 text-white p-4 flex justify-between items-center">
+        <Link to="/Login/UserHome" className="text-xl">
+          DogCare
+        </Link>
+        <nav>
+          <Link to="/" className="text-white mx-2 font-bold">
+            {" "}
+            Sair
+          </Link>
+          <Link to="/Perfil" className="text-white mx-2 font-bold">
+            Perfil
+          </Link>
+        </nav>
+      </header>
       <main className="flex-grow">
         <section className="relative">
           <img

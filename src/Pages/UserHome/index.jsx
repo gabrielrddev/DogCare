@@ -4,7 +4,7 @@ import { Footer } from "../../components/Footer/index.jsx";
 
 export function UserHome() {
   function markTo() {
-    alert("Porfavor registre seu pet para poder realizar seu agendamente.");
+    alert("Agendamento realizado com sucesso, esperando aprovação");
   }
 
   return (
@@ -16,7 +16,7 @@ export function UserHome() {
             {" "}
             Sair
           </Link>
-          <Link to="" className="text-white mx-2 font-bold">
+          <Link to="/Perfil" className="text-white mx-2 font-bold">
             Perfil
           </Link>
         </nav>
