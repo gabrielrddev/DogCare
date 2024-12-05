@@ -1,7 +1,7 @@
 import PetList from "../../components/PetList";
 import { Footer } from "../../components/Footer";
 import imagemdogcare from "/img/imageDogCareHome.png";
-import imagemPerfil from "../../../dist/img/imagemDePerfil.png";
+import imagemPerfil from "/img/adminback.png";
 import { Link } from "react-router-dom";
 
 export const UserPerfil = () => {
