@@ -9,6 +9,8 @@ import { AdminHistoryClient } from "../Pages/AdminHistoryClient";
 import { UserHome } from "../Pages/UserHome";
 import { About } from "../Pages/About";
 import { UserPerfil } from "../Pages/UserPerfil";
+
+import { Contact } from "../Pages/Contact";
 export function AuthRoutes() {
   return (
     <Routes>
@@ -17,6 +19,7 @@ export function AuthRoutes() {
       <Route path="Login" element={<Login />} />
       <Route path="Register" element={<Register />} />
       <Route path="AdminCalendar" element={<AdminCalendar />} />
+      <Route path="Contact" element={<Contact />} />
       <Route path="AdminCalendar/AdminHistory" element={<AdminHistory />} />
       <Route path="/Login/FixEmail" element={<FixEmail />} />
       <Route
