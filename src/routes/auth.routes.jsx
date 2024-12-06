@@ -9,6 +9,7 @@ import { AdminHistoryClient } from "../Pages/AdminHistoryClient";
 import { UserHome } from "../Pages/UserHome";
 import { About } from "../Pages/About";
 import { UserPerfil } from "../Pages/UserPerfil";
+import { UserPerfilBlock } from "../Pages/UserPerfilBlock";
 
 import { Contact } from "../Pages/Contact";
 export function AuthRoutes() {
@@ -36,6 +37,7 @@ export function AuthRoutes() {
       <Route path="/Register/Login/FixEmail" element={<FixEmail />} />
       <Route path="/About" element={<About />} />
       <Route path="/Perfil" element={<UserPerfil />} />
+      <Route path="/UserPerfilBlock" element={<UserPerfilBlock />} />
       {/* Rotas protegidas
       <Route 
         path="/dashboard" 

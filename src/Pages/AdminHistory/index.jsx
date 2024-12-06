@@ -11,7 +11,7 @@ let idCounter = 0; // contador global para IDs
 const bookingsData = [
   {
     id: idCounter++,
-    usuario: "Arnaldo",
+    usuario: <Link to="/UserPerfilBlock">Arnaldo</Link>,
     pet: "Batman",
     servico: "Pacote completo",
     entrada: "01/06",
